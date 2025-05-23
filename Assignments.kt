@@ -1,8 +1,8 @@
 import java.time.LocalDate
 
-data class Tarea(
+data class Assingments(
     val id: Int,
-    val courseCode: Int,       
+    val courseCode: String,       
     val description: String,  
     val dueDate: LocalDate,
     val completed: Boolean = false

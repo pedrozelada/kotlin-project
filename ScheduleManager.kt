@@ -3,13 +3,12 @@ import java.time.LocalDate
 import java.time.LocalTime
 
 class ScheduleManager {
-    // Listas para almacenar datos
     private val courses = mutableListOf<Course>()
-    private val schedules = mutableListOf<HorarioClase>()
+    private val schedules = mutableListOf<ClassSchedule>()
     private val tests = mutableListOf<Test>()
-    private var nextTestId = 1  // Auto-incremento para IDs de exámenes
+    private var nextTestId = 1
 
-    // --- Métodos para Courses ---
+    // --- Course Methods ---
     fun addCourse(course: Course) {
         courses.add(course)
     }
@@ -18,16 +17,16 @@ class ScheduleManager {
         return courses.find { it.code == code }
     }
 
-    // --- Métodos para HorarioClase ---
-    fun addSchedule(schedule: HorarioClase) {
+    // --- Schedule Methods ---
+    fun addSchedule(schedule: ClassSchedule) {
         schedules.add(schedule)
     }
 
-    fun getSchedulesByDay(day: DayOfWeek): List<HorarioClase> {
+    fun getSchedulesByDay(day: DayOfWeek): List<ClassSchedule> {
         return schedules.filter { it.day == day }.sortedBy { it.start }
     }
 
-    // --- Métodos para Tests ---
+    // --- Test Methods ---
     fun addTest(test: Test) {
         tests.add(test.copy(id = nextTestId++))
     }
@@ -39,6 +38,14 @@ class ScheduleManager {
     fun getUpcomingTests(days: Int = 7): List<Test> {
         val today = LocalDate.now()
         return tests.filter { it.date.isBefore(today.plusDays(days + 1L)) }
-                   .sortedBy { it.date }
+            .sortedBy { it.date }
+    }
+
+    fun getAllCourses(): List<Course> {
+        return courses.toList()
+    }
+
+    fun getSchedulesByCourse(courseCode: String): List<ClassSchedule> {
+        return schedules.filter { it.courseCode == courseCode }
     }
 }

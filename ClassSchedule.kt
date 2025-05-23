@@ -1,7 +1,7 @@
 import java.time.DayOfWeek
 import java.time.LocalTime
 
-data class HorarioClase(
+data class ClassSchedule(
     val courseCode: String,        
     val day: DayOfWeek,        
     val start: LocalTime,  

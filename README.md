@@ -1,8 +1,25 @@
 # Overview
+Kotlin Scheduling App 
 
-As a software engineer, I am constantly looking to improve my skills and deepen my understanding of various programming languages and development environments. For this project, I aimed to further my knowledge of Kotlin by creating a small console application. This software is designed to demonstrate basic input/output operations and string manipulation, providing a simple yet effective way to practice Kotlin syntax and functionality.
 
-[Software Demo Video](https://youtu.be/R8T0qLos2_k)
+As a software engineer, I am constantly seeking opportunities to expand my knowledge and deepen my understanding of programming languages and development environments. For this project, I chose to explore Kotlin, a modern and expressive language, by building a console-based scheduling application.
+
+This application allows users to manage their academic schedule, including adding courses, setting class times, and tracking upcoming tests. It supports various input features, handles invalid entries gracefully, and detects time conflicts between scheduled classes. The purpose of this project was to solidify my Kotlin fundamentals while building a practical tool.
+
+Features
+Add and manage courses (code, name, instructor)
+
+Schedule class times for each course
+
+View daily schedules
+
+Register and display upcoming tests
+
+Input validation for dates, times, and weekdays
+
+Automatic detection of time conflicts between classes
+
+[Software Demo Video](https://youtu.be/06QHV9lP5vU)
 
 # Development Environment
 
@@ -23,6 +40,17 @@ Official VS Code plugin (by fwcd.kotlin) that adds syntax highlighting, code com
 The command-line tool that converts Kotlin code into executable JVM bytecode
 
 Kotlin is a modern, statically-typed programming language that runs on the Java Virtual Machine (JVM). It is designed to be concise, expressive, and safe, while maintaining full interoperability with Java
+
+
+# Installation and Usage
+Prerequisites
+Install JDK 17+
+
+Install Kotlin using SDKMAN or Kotlin's official site
+
+Set up Kotlin in VS Code with the Kotlin plugin
+
+Running the Application
 
 # Useful Websites
 
